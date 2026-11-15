@@ -51,9 +51,17 @@ export const useContact = () => {
   const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!validateForm()) return;
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    const apiUrl = import.meta.env.VITE_WEB3FORMS_API_URL;
+    if (!accessKey || !apiUrl) {
+      setResult('Missing Web3Forms configuration. Add VITE_WEB3FORMS_ACCESS_KEY and VITE_WEB3FORMS_API_URL to .env.local, then restart Vite.');
+      return;
+    }
+
     setResult('Sending...');
     const formData = {
-      access_key: "4ebb13d1-2c07-4424-b6d9-200717b3cc8b",
+      access_key: accessKey,
       subject: 'New Booking Enquiry',
       from_name: 'Rishikesh Adventure Website',
       replyto: email.trim(),
@@ -68,7 +76,7 @@ export const useContact = () => {
     };
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

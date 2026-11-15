@@ -13,10 +13,23 @@ From the project directory, install dependencies and start the Vite development 
 
 ```bash
 npm install
+```
+
+Create a `.env.local` file in the project root and configure Web3Forms:
+
+```env
+VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
+VITE_WEB3FORMS_API_URL=https://api.web3forms.com/submit
+```
+
+You can use `.env.example` as a template. Then start the app:
+
+```bash
 npm run dev
 ```
 
 Open the local URL printed by Vite. The development server is configured to use port `3000`.
+Restart the Vite server after changing environment variables.
 
 ## Available Commands
 
@@ -47,6 +60,6 @@ npm run preview  # Preview the production build locally
 
 ## Contact Form Delivery
 
-The contact form submits enquiries to **Web3Forms**, which delivers form submissions by email. A valid Web3Forms access key is required for submissions to succeed. The current integration is implemented in `src/pages/Contact/contactController.ts`.
+The contact form submits enquiries to **Web3Forms**, which delivers form submissions by email. Both `VITE_WEB3FORMS_ACCESS_KEY` and `VITE_WEB3FORMS_API_URL` must be set in `.env.local` for submissions to succeed. The `.env*` files are ignored by Git, so do not commit your local credentials.
 
 There is **no SMS provider or SMS-sending integration** in this project. The WhatsApp contact link opens a WhatsApp conversation; it does not send an SMS.
