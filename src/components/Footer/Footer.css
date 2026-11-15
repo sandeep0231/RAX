@@ -1,0 +1,17 @@
+.site-footer {
+  background-color: #f3f7f0;
+  border-top: 1px solid rgba(18, 53, 36, 0.1);
+}
+
+.footer-link {
+  color: #374151;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.footer-link:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

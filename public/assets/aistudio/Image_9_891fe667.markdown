@@ -1,0 +1,243 @@
+---
+name: Rishikesh Adventure X
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#d0dbed'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e6eeff'
+  surface-container-high: '#dee9fc'
+  surface-container-highest: '#d9e3f6'
+  on-surface: '#121c2a'
+  on-surface-variant: '#41493e'
+  inverse-surface: '#27313f'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#717a6d'
+  outline-variant: '#c0c9bb'
+  surface-tint: '#2a6b2c'
+  primary: '#00450d'
+  on-primary: '#ffffff'
+  primary-container: '#1b5e20'
+  on-primary-container: '#90d689'
+  inverse-primary: '#91d78a'
+  secondary: '#785900'
+  on-secondary: '#ffffff'
+  secondary-container: '#fdc003'
+  on-secondary-container: '#6c5000'
+  tertiary: '#1f4130'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#365946'
+  on-tertiary-container: '#a8ceb6'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#acf4a4'
+  primary-fixed-dim: '#91d78a'
+  on-primary-fixed: '#002203'
+  on-primary-fixed-variant: '#0c5216'
+  secondary-fixed: '#ffdf9e'
+  secondary-fixed-dim: '#fabd00'
+  on-secondary-fixed: '#261a00'
+  on-secondary-fixed-variant: '#5b4300'
+  tertiary-fixed: '#c5ecd2'
+  tertiary-fixed-dim: '#a9cfb7'
+  on-tertiary-fixed: '#002112'
+  on-tertiary-fixed-variant: '#2b4e3b'
+  background: '#f8f9ff'
+  on-background: '#121c2a'
+  surface-variant: '#d9e3f6'
+typography:
+  display-lg:
+    fontFamily: Space Grotesk
+    fontSize: 56px
+    fontWeight: '700'
+    lineHeight: 64px
+    letterSpacing: -0.03em
+  display-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 38px
+    fontWeight: '700'
+    lineHeight: 46px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Space Grotesk
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Space Grotesk
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Space Grotesk
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 14px
+    letterSpacing: 0.06em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+### Brand Personality & Philosophy
+This design system embodies the wild, sacred dynamism of the Himalayan foothills and the raging white waters of the Ganges. Rooted in Rishikesh—the adventure and yoga capital of the world—the visual narrative merges rugged endurance with refined tranquility. It avoids generic eco-clichés in favor of an athletic, tactical, yet spiritually grounded aesthetic. 
+
+### Target Audience & Emotional Impact
+Designed for global trekkers, white-water rafters, spiritual wanderers, and weekend mountaineers seeking verified safety alongside adrenaline. The interface inspires:
+- **Quiet Confidence:** Grounded, institutional trust ensuring certified safety protocols.
+- **Kinetic Energy:** Immediate desire to plunge into rapid waters and mountain passes, sparked by radiant amber accelerations.
+- **Organic Clarity:** Clean, crisp air and river-washed stones, providing seamless booking clarity amidst raw nature.
+
+### Design Movement: Modern Alpine Material
+Drawing heavily from modern Material UI v5 standards while infusing organic alpine tactility. The interface balances high-utility information density with lush immersion: structural rounded cards, clean tactile layers, generous breathability, and stark amber interactive affordances against deep jungle tones.
+
+## Colors
+
+The 70/30 environmental distribution governs the color architecture, framing nature as the vast terrain and amber as the active human guide.
+
+### Primary Forest Palette (70%)
+- **Deep Canopy (`#123524`):** Anchoring headers, dense navigation, and high-impact structural blocks.
+- **Lush Valley (`#1B5E20` - Primary):** Brand badges, focused interactive boundaries, verified accolades, and foundational surfaces.
+- **Sub-Alpine Foliage (`#2E7D32`):** Hover states, progressive indicators, and secondary supportive nodes.
+- **Rivermist Tint (`#E8F5E9`):** Soft contextual fills, tag backgrounds, notification containers, and active card washes.
+
+### Adventure Amber Accents (30%)
+- **Solar Flare Amber (`#FFC107` - Secondary):** Dedicated strictly to forward momentum—primary CTAs, booking triggers, rating stars, alert badges, and instant checkout pathways.
+- **Dawn Light Amber (`#FFD54F`):** Hover transitions, focus rings, and high-visibility map waypoints.
+
+### River Stone Neutrals & Canvas
+- **Pebble Base (`#F8FAF5`):** The primary off-white viewport wash, reminiscent of sun-bleached riverbed rocks.
+- **Pure Rapids (`#FFFFFF`):** Elevated cards, modals, and isolated content decks.
+- **Ganga Slate (`#1F2937`):** Primary body text, deep data readouts, and high-contrast iconography.
+- **Slate Fog (`#4B5563` & `#9CA3AF`):** Secondary meta-labels, disabled borders, and inactive trails.
+
+## Typography
+
+The typographic system fuses the bold, outdoor-technical spirit of **Space Grotesk** with the humanistic, legible warmth of **Plus Jakarta Sans** and the precision navigation of **JetBrains Mono**.
+
+### Roles & Execution
+- **Headlines (Space Grotesk):** Engineered geometry with subtle quirks, delivering the visual grit of mountaineering maps and high-altitude signage. Display sizes command attention across epic trail showcases and rafting expeditions.
+- **Body & Prose (Plus Jakarta Sans):** Highly readable at rapid scannability, featuring open apertures that guarantee legibility on glare-heavy mobile screens under direct Himalayan sunlight.
+- **Tactical Data & Micro-Labels (JetBrains Mono):** Reserved for technical adventure parameters: GPS coordinates, river rapid grades (Class III-V), duration, altitude gain, and equipment checklists. This monospaced touch reinforces expedition precision.
+
+## Layout & Spacing
+
+### Layout Architecture
+Built on an adaptive 12-column responsive fluid grid designed to accommodate rich visual storytelling alongside structured booking modules:
+- **Desktop (1200px+):** 12 columns, 24px (`1.5rem`) gutters, fluid container maxing out at `1440px` with minimum 32px (`2rem`) margins.
+- **Tablet (768px – 1199px):** 8 columns, 20px (`1.25rem`) gutters, 24px margins. Content snaps into dual-column cards and staggered horizontal media pairs.
+- **Mobile (< 768px):** 4 columns, 16px (`1rem`) gutters, 16px (`1rem`) margins. Edge-to-edge bleed options for photo galleries with fixed bottom booking sheets.
+
+### Spacing Principles
+Component composition follows strict 8-point increments. Inner card padding defaults to `space-lg` (24px) for prominent tour packages, collapsing to `space-md` (16px) on mobile viewports. Dense metadata lines (duration, gear, grade) utilize `space-xs` and `space-sm` for unified cohesion.
+
+## Elevation & Depth
+
+Visual hierarchy uses a refined outdoor approach: daylight-inspired ambient shadows mixed with clean river-stone tonal layering to eliminate artificial blur.
+
+### Elevation Scale
+- **Level 0 (Flat Ground):** Default canvas (`#F8FAF5`). Outlines on surface lines use a delicate stone stroke (`rgba(31, 41, 55, 0.08)`).
+- **Level 1 (Resting Cards & Filters):** Pure rapids white (`#FFFFFF`) surfaces elevated with a warm, natural shadow tinted by forest hues:  
+  `box-shadow: 0 4px 16px -2px rgba(18, 53, 36, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.04);`
+- **Level 2 (Hovered Cards & Interactive Modules):** Lifted physical state for actionable expeditions:  
+  `box-shadow: 0 12px 24px -4px rgba(18, 53, 36, 0.12), 0 4px 8px -2px rgba(18, 53, 36, 0.04);`
+- **Level 3 (Sticky Navigation, Dropdowns, Date Pickers):**  
+  `box-shadow: 0 20px 32px -6px rgba(18, 53, 36, 0.16), 0 8px 12px -3px rgba(0, 0, 0, 0.06);`
+- **Level 4 (Booking Sheets & Modal Dialogs):** Deep protective presence with high spatial separation:  
+  `box-shadow: 0 28px 48px -8px rgba(18, 53, 36, 0.22);` paired with a translucent forest veil overlay (`rgba(18, 53, 36, 0.45)`).
+
+## Shapes
+
+The interface embraces a **Rounded (Level 2)** geometry:
+- **Base Components (`0.5rem` / 8px):** Input fields, interactive badges, itinerary nodes, data pills, and standard buttons.
+- **Containers & Surfaces (`1rem` / 16px):** Adventure trip cards, media cards, review carousels, and filtering containers.
+- **Lead Promos & Modal Windows (`1.5rem` / 24px):** Hero booking pods, expedition recap panels, and bottom sheets on mobile devices.
+- **Pill Elements (`9999px`):** Status flags (e.g., "Rapid Grade IV", "Certified Guide"), search bar aggregates, and floating action buttons.
+
+This geometry softens the brutalist edges of technical gear, mirroring natural river stones smoothed by Himalayan currents while retaining modern digital rigor.
+
+## Components
+
+### Buttons
+- **Primary (Adventure Amber):** Background `#FFC107`, text `#1F2937` (high legibility bold). Hover state transitions to `#FFD54F` with an elevation jump to Level 2. Used strictly for conversions: "Book Expedition", "Reserve Seat", "Claim Permit".
+- **Secondary (Forest Canopy):** Background `#1B5E20`, text `#FFFFFF`. Hover state transitions to `#2E7D32`. Used for secondary workflows: "View Itinerary", "Safety Protocol", "Download Route".
+- **Outlined / Ghost:** Transparent background, 1.5px border `#1B5E20`, text `#1B5E20`. Hover yields a soft Rivermist tint (`#E8F5E9`).
+
+### Adventure Chips & Badges
+- **Technical Chips:** Monospaced (`JetBrains Mono`), background `#E8F5E9`, text `#123524`, border `1px solid rgba(27, 94, 32, 0.2)`. Used for rapid classification (e.g., `CLASS IV+`, `32 KM`, `ELEV. 1400M`).
+- **Urgency / Highlight Chips:** Amber fill (`#FFC107`), text `#1F2937`, font weight 700. Used for "Only 3 Spots Left" or "Best Season: Oct–Apr".
+
+### Adventure Cards
+- Constructed with `#FFFFFF` resting on `#F8FAF5` at Level 1 elevation, featuring 16px (`rounded-lg`) corner radii.
+- **Media Header:** Edge-to-edge high-contrast imagery with a subtle bottom gradient overlay (`rgba(18, 53, 36, 0.4)`) to anchor overlaid price chips and rapid grades.
+- **Card Body:** Clear visual separation with `space-md` gaps. Highlights expedition title in Space Grotesk, followed by technical parameter chips, ending in a dual action row (Price Display + Amber CTA).
+
+### Form Inputs & Search Filters
+- **Input Fields:** `#FFFFFF` background, 1.5px solid border `#E5E7EB`, 8px roundedness. Active focus triggers a 2px stroke in `#1B5E20` with an amber focus shadow glow (`0 0 0 3px rgba(255, 193, 7, 0.3)`).
+- **Date & Guest Pickers:** Styled as dual tactile pills with prominent calendar and hiker icons rendered in Forest Green.
+
+### Selection Controls (Checkboxes & Radios)
+- **Checkboxes:** 8px border radius, 2px border in `#1B5E20`. Checked state delivers solid `#1B5E20` fill with a crisp white tick.
+- **Radio Buttons:** Circular, concentric active styling in `#1B5E20` with a pure white center pin.
+
+### Lists & Expedition Timeline
+- Chronological itinerary steps marked by vertical dashed green trails (`#2E7D32`). Nodes utilize amber dots encircled by rivermist rings, featuring monospaced day markers ("DAY 01 - 06:00 AM").

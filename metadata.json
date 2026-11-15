@@ -1,0 +1,8 @@
+{
+  "name": "Rishikesh Adventure X",
+  "description": "Premier Himalayan adventure tourism website in Rishikesh, Uttarakhand offering white water river rafting, 83m bungee jumping, riverside camping, ziplining, trekking, and kayaking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
