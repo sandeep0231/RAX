@@ -51,7 +51,6 @@ export const useContact = () => {
   const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!validateForm()) return;
-
     setResult('Sending...');
     const formData = {
       access_key: "4ebb13d1-2c07-4424-b6d9-200717b3cc8b",
