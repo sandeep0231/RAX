@@ -83,7 +83,18 @@ export const BookingModal: React.FC = () => {
   const estimatedTotal = matchedActivity ? matchedActivity.price * participants : 0;
 
   const whatsappMessage = encodeURIComponent(
-    `Hello ${companyInfo.name}, I would like to reserve "${selectedActivity || 'Rishikesh Adventure'}" for ${participants} adventurer(s)${preferredDate ? ` on ${preferredDate}` : ''}. Name: ${fullName || 'Guest'}.`
+    [
+      `Hello ${companyInfo.name}, I would like to make a booking.`,
+      '',
+      `*Name*: ${fullName.trim()}`,
+      `*Activity Name*: ${selectedActivity}`,
+      `*Phone*: ${phone.trim()}`,
+      `*Email*: ${email.trim()}`,
+      `*Preferred Date*: ${preferredDate}`,
+      `*Number of Adventurers*: ${participants}`,
+      // `*Estimated Total*: ₹${estimatedTotal.toLocaleString('en-IN')}`,
+      `*Special Notes*: ${notes.trim() || 'None'}`,
+    ].join('\n')
   );
   const cleanWaDigits = companyInfo.whatsappNumber.replace(/\D/g, '');
   const whatsappHref = `https://wa.me/${cleanWaDigits}?text=${whatsappMessage}`;
