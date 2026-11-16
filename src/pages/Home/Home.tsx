@@ -340,7 +340,7 @@ export const Home: React.FC = () => {
       </Box>
 
       {/* 4. Popular Adventure Packages */}
-      <Container maxWidth="xl" sx={{ py: { xs: 7, md: 10 }, px: { xs: 2, sm: 3, md: 4 } }}>
+      {/* <Container maxWidth="xl" sx={{ py: { xs: 7, md: 10 }, px: { xs: 2, sm: 3, md: 4 } }}>
         <SectionTitle
           eyebrow="Value Expeditions"
           title="Curated Multi-Adventure Combos"
@@ -487,7 +487,7 @@ export const Home: React.FC = () => {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Container> */}
 
       {/* 5. Customer Testimonials */}
       <Box sx={{ bgcolor: '#EFF5EC', py: { xs: 7, md: 10 } }}>
