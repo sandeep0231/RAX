@@ -269,7 +269,7 @@ export const AdventureDetails: React.FC = () => {
       <Container maxWidth="xl" sx={{ py: { xs: 5, md: 7 }, px: { xs: 2, sm: 3, md: 4 } }}>
         <Grid container spacing={4} sx={{ alignItems: 'flex-start' }}>
           {/* Left Column: Detailed Information */}
-          <Grid size={{ xs: 12, lg: 8 }}>
+          <Grid size={{ xs: 12, lg: 12 }}>
             {/* Overview */}
             <Box sx={{ mb: 5 }}>
               <Typography
@@ -530,7 +530,7 @@ export const AdventureDetails: React.FC = () => {
           </Grid>
 
           {/* Right Column: Sticky Booking Widget */}
-          <Grid size={{ xs: 12, lg: 4 }}>
+          {/* <Grid size={{ xs: 12, lg: 4 }}>
             <Card
               sx={{
                 position: { lg: 'sticky' },
@@ -672,7 +672,7 @@ export const AdventureDetails: React.FC = () => {
                 </IconButton>
               </Box>
 
-              {/* Price Breakdown */}
+                 //### Price Breakdown
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mb: 2.5 }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                   <Typography variant="body2" sx={{ color: '#4B5563' }}>
@@ -742,7 +742,7 @@ export const AdventureDetails: React.FC = () => {
                 Chat with Guide on WhatsApp
               </Button>
             </Card>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
 

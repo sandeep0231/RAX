@@ -62,7 +62,10 @@ export const BookingModal: React.FC = () => {
     if (!preferredDate) {
       nextErrors.preferredDate = 'Please select your preferred adventure date.';
     }
-    if (participants < 1 || participants > 120) {
+    if (!selectedActivity) {
+      nextErrors.selectedActivity = 'Please select an adventure activity.';
+    }
+    if (!Number.isInteger(participants) || participants < 1 || participants > 120) {
       nextErrors.participants = 'Group size must be between 1 and 120.';
     }
     setErrors(nextErrors);
@@ -84,6 +87,11 @@ export const BookingModal: React.FC = () => {
   );
   const cleanWaDigits = companyInfo.whatsappNumber.replace(/\D/g, '');
   const whatsappHref = `https://wa.me/${cleanWaDigits}?text=${whatsappMessage}`;
+
+  const handleBookViaWhatsApp = () => {
+    if (!validate()) return;
+    window.open(whatsappHref, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <Dialog
@@ -129,46 +137,6 @@ export const BookingModal: React.FC = () => {
       </DialogTitle>
 
       <DialogContent sx={{ p: { xs: 2.5, sm: 3.5 }, bgcolor: '#F8FAF5' }}>
-        {submittedRef ? (
-          <Box sx={{ textAlign: 'center', py: 3 }}>
-            <CheckCircleOutlineIcon sx={{ fontSize: 56, color: '#1B5E20', mb: 1.5 }} />
-            <Typography
-              className="font-display"
-              sx={{ fontWeight: 700, fontSize: '1.4rem', color: '#123524', mb: 1 }}
-            >
-              Reservation Request Confirmed
-            </Typography>
-            <Typography variant="body2" sx={{ color: '#4B5563', mb: 2.5, lineHeight: 1.65 }}>
-              Thank you, <strong>{fullName}</strong>. Your permit request for{' '}
-              <strong>{selectedActivity}</strong> ({participants} adventurer
-              {participants > 1 ? 's' : ''} on {preferredDate}) has been logged under
-              reference <strong className="font-mono-tech">{submittedRef}</strong>. Our
-              Tapovan expedition coordinator will reach out within 15 minutes.
-            </Typography>
-
-            <Alert severity="success" sx={{ textAlign: 'left', mb: 3 }}>
-              Estimated Expedition Total: <strong>₹{estimatedTotal.toLocaleString('en-IN')}</strong>{' '}
-              (includes certified gear & river permits).
-            </Alert>
-
-            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 1.5, justifyContent: 'center' }}>
-              <Button
-                component="a"
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="contained"
-                color="primary"
-                startIcon={<WhatsAppIcon />}
-              >
-                Confirm on WhatsApp
-              </Button>
-              <Button variant="outlined" color="primary" onClick={closeBookingModal}>
-                Done
-              </Button>
-            </Box>
-          </Box>
-        ) : (
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ pt: 1 }}>
             <Grid container spacing={2}>
               <Grid size={{ xs: 12 }}>
@@ -178,6 +146,8 @@ export const BookingModal: React.FC = () => {
                   label="Select Adventure Activity"
                   value={selectedActivity}
                   onChange={(e) => setSelectedActivity(e.target.value)}
+                  error={Boolean(errors.selectedActivity)}
+                  helperText={errors.selectedActivity}
                 >
                   {activities.map((act) => (
                     <MenuItem key={act.id} value={act.title}>
@@ -267,47 +237,11 @@ export const BookingModal: React.FC = () => {
                 />
               </Grid>
             </Grid>
-
-            {matchedActivity && (
-              <Box
-                sx={{
-                  mt: 2.5,
-                  p: 2,
-                  borderRadius: 2,
-                  bgcolor: '#E8F5E9',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                }}
-              >
-                <Typography variant="body2" sx={{ color: '#123524', fontWeight: 600 }}>
-                  Estimated Total ({participants} × ₹{matchedActivity.price.toLocaleString('en-IN')})
-                </Typography>
-                <Typography
-                  className="font-display tabular-nums"
-                  sx={{ fontWeight: 700, fontSize: '1.25rem', color: '#1B5E20' }}
-                >
-                  ₹{estimatedTotal.toLocaleString('en-IN')}
-                </Typography>
-              </Box>
-            )}
-
             <Box sx={{ mt: 2.5, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 1.5 }}>
+              
               <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="secondary"
-                size="large"
-                sx={{ py: 1.35 }}
-              >
-                Confirm Slot Request
-              </Button>
-              <Button
-                component="a"
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
+                type="button"
+                onClick={handleBookViaWhatsApp}
                 fullWidth
                 variant="outlined"
                 color="primary"
@@ -317,9 +251,10 @@ export const BookingModal: React.FC = () => {
               >
                 Book via WhatsApp
               </Button>
+              
             </Box>
           </Box>
-        )}
+       
       </DialogContent>
     </Dialog>
   );

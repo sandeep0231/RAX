@@ -290,7 +290,7 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} {companyInfo.name} Pvt. Ltd. All rights reserved.
             Uttarakhand Tourism Registered.
           </Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5 }}>
+          {/* <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5 }}>
             <Link to="/about" className="footer-link">
               Safety Charter
             </Link>
@@ -300,7 +300,7 @@ export const Footer: React.FC = () => {
             <Link to="/contact" className="footer-link">
               Shivpuri Basecamp Directions
             </Link>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </footer>
