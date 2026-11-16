@@ -288,7 +288,7 @@ export const Footer: React.FC = () => {
         >
           <Typography variant="body2" sx={{ color: '#4B5563', fontSize: '0.8rem' }}>
             © {new Date().getFullYear()} {companyInfo.name} Pvt. Ltd. All rights reserved.
-            Uttarakhand Tourism Registered.
+            {/* Uttarakhand Tourism Registered. */}
           </Typography>
           {/* <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5 }}>
             <Link to="/about" className="footer-link">
